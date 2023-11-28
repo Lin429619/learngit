@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<ctype.h>
+#include<string.h>
 #define SIZE 100
 
 char *s_gets(char *st,int n);
@@ -7,7 +8,7 @@ int myatoi(char *str);
 
 int main()
 {
-    char *str[SIZE];
+    char str[SIZE];
     while(s_gets(str,SIZE)!=NULL){
         printf("String %s change to number is %d\n",str,myatoi(str));
     }

@@ -13,9 +13,9 @@ int main()
         if(s_gets(str2,SIZE)!=NULL){
             char *p=string_in(str1,str2);
             if(p!=NULL){
-                printf("The position is %p\n",p);
+                printf("The position is %p",p);
             }else{
-                printf("Not Found.\n");
+                printf("Not Found.");
             }
         }
     }
