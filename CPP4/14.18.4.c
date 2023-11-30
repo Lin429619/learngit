@@ -30,7 +30,7 @@ void print_user_list(struct user list[],int num){
     }
 }*/
 
-//(b)结构的值
+//(b)传结构的值
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
