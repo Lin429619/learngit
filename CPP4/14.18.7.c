@@ -43,7 +43,7 @@ int main()
 
     printf("Do you want to modety library?(Y/N):");
     scanf("%c",&delete);
-    if( delete =='Y'){
+    if( delete == 'Y'){
         for(int i=0;i<count;i++){
             printf("%s by %s: $%.2f\n",library[count].title,
             library[count].author,library[count].value);
@@ -77,7 +77,7 @@ int main()
                printf("%s by %s: $%.2f\n",library[count].title,
                 library[count].author,library[count].value); 
             }
-            fwrite(&library[filecount],size,1,pbooks);
+            fwrite(&library[filecount],size,count-filecount,pbooks);
         }
     }
     else
