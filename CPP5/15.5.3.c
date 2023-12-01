@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<limits.h>
-#include<string.h>
 #include<stdlib.h>
 
 int one_count(int n);
@@ -15,7 +14,6 @@ int main(int argc,char *argv[])
 }
 
 int one_count(int n){
-   // int size=CHAR_BIT * sizeof(int);
     int cnt= 0;
     while(n != 0){
         if(n & 1) {
