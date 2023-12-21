@@ -8,7 +8,7 @@ struct Node{
 
 struct Node *head;
 
-/*void InsertHead(int x){
+/*void InsertAtHead(int x){
     struct Node *temp = (struct Node*)malloc(sizeof(struct Node));
     temp->data = x;
     temp->next = head;
