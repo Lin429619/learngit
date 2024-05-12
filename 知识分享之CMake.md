@@ -6,9 +6,6 @@
 
 ​	而 CMake 恰好能解决上述问题， 其允许开发者指定整个工程的编译流程，在根据编译平台，自动生成本地化的Makefile和工程文件，最后用户只需`make`编译即可，所以可以把CMake看成一款自动生成 `Makefile`的工具。
 
-* 蓝色线是`makefile`构建项目的过程
-* 红色线是`cmake`构建项目的过程
-
 #### CMake应用场景
 
 ​	假如我们有一个深度学习框架的部分工程列表，里面有超过40个互相调用的工程共同组成，一些用于生成库文件，一些用于实现逻辑功能。他们之间的调用关系复杂而严格，如果我想在这样复杂的框架下==进行二次开发==，显然只拥有它的源码是远远不够的，还需要清楚的明白这几十个项目之间的复杂关系，在没有原作者的帮助下进行这项工作几乎是不可能的。
@@ -442,12 +439,12 @@ add_library(calc STATIC ${SRC_LIST})
 message([STATUS|WARNING|AUTHOR_WARNING|FATAL_ERROR|SEND_ERROR] "message to display" ...)
 ```
 
-(无) ：重要消息
-`STATUS` ：非重要消息
-`WARNING`：CMake 警告, 会继续执行
-`AUTHOR_WARNING`：CMake 警告 (dev), 会继续执行
-`SEND_ERROR`：CMake 错误, 继续执行，但是会跳过生成的步骤
-`FATAL_ERROR`：CMake 错误, 终止所有处理过程
+* (无) ：重要消息
+* `STATUS` ：非重要消息
+* `WARNING`：CMake 警告, 会继续执行
+* `AUTHOR_WARNING`：CMake 警告 (dev), 会继续执行
+* `SEND_ERROR`：CMake 错误, 继续执行，但是会跳过生成的步骤
+* `FATAL_ERROR`：CMake 错误, 终止所有处理过程
 
 CMake的命令行工具会在stdout上显示`STATUS`消息，在stderr上显示其他所有消息。
 
